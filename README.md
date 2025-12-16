@@ -2,6 +2,16 @@
 
 A calm, minimal fitness-planning **agent** that generates a short daily workout plan (10–20 minutes) based on a user’s goal, energy level, available time, equipment, and constraints (e.g., knee pain, no jumping, soreness).
 
+## Live demo
+- Streamlit app: https://fitness-consistency-agent.streamlit.app
+
+## What it does
+- Inputs: …
+- Output: …
+- Logic: …
+
+
+
 ## Screenshots
 
 ### Inputs
