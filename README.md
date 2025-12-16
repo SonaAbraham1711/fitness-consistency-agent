@@ -2,10 +2,17 @@
 
 A calm, minimal fitness-planning **agent** that generates a short daily workout plan (10–20 minutes) based on a user’s goal, energy level, available time, equipment, and constraints (e.g., knee pain, no jumping, soreness).
 
-## Screenshot
+## Screenshots
 
-### Generated plan (dark mode)
-![Generated plan](assets/ui-output.png)
+### Inputs
+![Inputs](assets/ui-01-inputs.png)
+
+### Generated plan + rationale
+![Plan output](assets/ui-02-output.png)
+
+### Agent logic (constraint mapping)
+![Agent logic](assets/ui-03-logic.png)
+
 
 
 ## Why I’m building this
