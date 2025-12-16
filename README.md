@@ -2,6 +2,12 @@
 
 A calm, minimal fitness-planning **agent** that generates a short daily workout plan (10–20 minutes) based on a user’s goal, energy level, available time, equipment, and constraints (e.g., knee pain, no jumping, soreness).
 
+## Screenshot
+
+### Generated plan (dark mode)
+![Generated plan](assets/ui-output.png)
+
+
 ## Why I’m building this
 Many fitness apps create friction: too many choices, too much time, and “commitment anxiety.”  
 This MVP focuses on one job-to-be-done: **help a busy person decide “What should I do today?” in under 30 seconds** — safely and with low effort.
@@ -56,6 +62,15 @@ This is not just text generation. The agent:
 2. **Applies decision logic** (filter / substitute movements)
 3. **Generates a plan + rationale** (“Why this plan?”)
 
+## What’s implemented
+- Streamlit web app with dark, minimal UI
+- Movement library with metadata (goal, impact, strain areas, equipment)
+- Rule-based filtering and substitutions for safety and soreness
+- Dynamic, explainable output via **“Why this plan?”**
+- Optional plan download (TXT and JSON)
+- Lightweight local metrics logging for plan generation events
+
+
 ## Agent Logic: Constraint Mapping (How Safety Works)
 The agent uses rule-based filtering and substitution before formatting the final plan.
 
@@ -80,5 +95,12 @@ The agent uses rule-based filtering and substitution before formatting the final
 - **Consistency (North Star):** % of users generating plans **≥ 5 days out of 7**  
 - **Trust & Safety:** thumbs-down / “too hard / unsafe / irrelevant” rate  
 - **Retention:** D7 / D30 returning users
+
+
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+
 
 
