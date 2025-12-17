@@ -1,0 +1,48 @@
+{
+  "exercises": {
+    "strength": [
+      {"name": "Wall Push-ups", "duration": "45s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["chest", "shoulders", "arms"], "quiet": true},
+      {"name": "Glute Bridges", "duration": "45s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["glutes", "hamstrings"], "quiet": true},
+      {"name": "Bird-Dog", "duration": "40s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["core", "back"], "quiet": true},
+      {"name": "Standing Side Leg Raises", "duration": "40s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["hips", "glutes"], "quiet": true},
+      {"name": "Chair Squats", "duration": "45s", "sets": 3, "impact": "low", "equipment": "chair", "areas": ["legs", "glutes"], "quiet": true},
+      {"name": "Incline Push-ups", "duration": "45s", "sets": 3, "impact": "low", "equipment": "table/chair", "areas": ["chest", "shoulders"], "quiet": true}
+    ],
+    "mobility": [
+      {"name": "Gentle March in Place", "duration": "60s", "sets": 1, "impact": "low", "equipment": "none", "areas": ["full body"], "quiet": true},
+      {"name": "Shoulder Rolls", "duration": "30s", "sets": 2, "impact": "low", "equipment": "none", "areas": ["shoulders", "upper back"], "quiet": true},
+      {"name": "Hip Circles", "duration": "30s", "sets": 2, "impact": "low", "equipment": "none", "areas": ["hips"], "quiet": true},
+      {"name": "Cat-Cow Stretch", "duration": "45s", "sets": 2, "impact": "low", "equipment": "none", "areas": ["back", "core"], "quiet": true},
+      {"name": "Neck Stretches", "duration": "30s", "sets": 2, "impact": "low", "equipment": "none", "areas": ["neck"], "quiet": true},
+      {"name": "Ankle Circles", "duration": "30s", "sets": 2, "impact": "low", "equipment": "none", "areas": ["ankles"], "quiet": true}
+    ],
+    "fat_loss": [
+      {"name": "March in Place (brisk)", "duration": "60s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["full body"], "quiet": true},
+      {"name": "Standing Knee Raises", "duration": "45s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["core", "hips"], "quiet": true},
+      {"name": "Speed Skaters (no jump)", "duration": "45s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["legs", "glutes"], "quiet": true},
+      {"name": "High Knees (gentle)", "duration": "45s", "sets": 3, "impact": "medium", "equipment": "none", "areas": ["legs", "core"], "quiet": false},
+      {"name": "Butt Kicks", "duration": "45s", "sets": 3, "impact": "low", "equipment": "none", "areas": ["legs", "hamstrings"], "quiet": true}
+    ]
+  },
+  "warmup": [
+    "Deep Breathing (30s)",
+    "Gentle Neck Rolls (30s)",
+    "Shoulder Circles (30s)",
+    "Torso Twists (30s)",
+    "Ankle Rolls (30s)"
+  ],
+  "cooldown": [
+    "Standing Quad Stretch (30s each)",
+    "Hamstring Stretch (30s each)",
+    "Calf Stretch (30s each)",
+    "Chest Opener (30s)",
+    "Child's Pose (30s)"
+  ],
+  "constraint_mapping": {
+    "knee_pain": ["squats", "lunges", "jumping", "high impact"],
+    "back_pain": ["plank", "bridges", "heavy core"],
+    "quiet": ["jumping", "high knees", "burpees", "running in place"],
+    "low_energy": ["high intensity", "complex sequences"],
+    "high_energy": ["static holds only"]
+  }
+}

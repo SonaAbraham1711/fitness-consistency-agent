@@ -1,0 +1,5 @@
+# LLM requirements for Python 3.13
+crewai>=0.165.1
+langchain-core>=0.1.0
+ollama>=0.1.0
+python-dotenv>=1.0.0
