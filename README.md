@@ -4,6 +4,7 @@ A calm, minimal fitness-planning **agent** that generates a short daily workout 
 
 ## Live demo
 - Streamlit app: https://fitness-consistency-agent.streamlit.app
+- Streamlit app LLM integrated: https://fitness-consistency-agent-llm.streamlit.app
 
 ## What it does
 - **Inputs:** Goal, time, energy, equipment, constraints, soreness
