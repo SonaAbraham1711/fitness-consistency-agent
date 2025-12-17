@@ -6,28 +6,18 @@ A calm, minimal fitness-planning **agent** that generates a short daily workout 
 - Streamlit app: https://fitness-consistency-agent.streamlit.app
 
 ## What it does
-- Inputs: …
-- Output: …
-- Logic: …
+- **Inputs:** Goal, time, energy, equipment, constraints, soreness
+- **Output:** Structured workout plan with "Why this plan?" rationale
+- **Logic:** Rule-based safety filtering + optional AI enhancement
 
-
-
-## Screenshots
-
-### Inputs
-![Inputs](assets/ui-01-inputs.png)
-
-### Generated plan + rationale
-![Plan output](assets/ui-02-output.png)
-
-### Agent logic (constraint mapping)
-![Agent logic](assets/ui-03-logic.png)
-
-
+## Available Versions
+- **Original:** `app.py` - Pure rule-based, always reliable
+- **AI-Enhanced:** `app_llm_simple.py` - Same interface + optional AI explanations
 
 ## Why I’m building this
 Many fitness apps create friction: too many choices, too much time, and “commitment anxiety.”  
 This MVP focuses on one job-to-be-done: **help a busy person decide “What should I do today?” in under 30 seconds** — safely and with low effort.
+
 
 ## Target user
 - Busy adults (especially parents) with limited time (10–20 minutes)
@@ -73,33 +63,34 @@ Users want an easy, safe way to choose a doable workout **today**, without searc
 - Cool-down (1 min): calf + hamstring stretch  
 **Why this plan?** Low energy + knee-friendly + quiet + legs-sore adjustments.
 
-## What makes this an “agent”
+## What makes this an "agent"
 This is not just text generation. The agent:
 1. **Reads context** (inputs + constraints + soreness)
 2. **Applies decision logic** (filter / substitute movements)
-3. **Generates a plan + rationale** (“Why this plan?”)
+3. **Generates a plan + rationale** ("Why this plan?")
 
-## What’s implemented
+## What's implemented
 - Streamlit web app with dark, minimal UI
 - Movement library with metadata (goal, impact, strain areas, equipment)
 - Rule-based filtering and substitutions for safety and soreness
-- Dynamic, explainable output via **“Why this plan?”**
+- Dynamic, explainable output via **"Why this plan?"**
 - Optional plan download (TXT and JSON)
 - Lightweight local metrics logging for plan generation events
+- **Optional AI integration** for enhanced explanations (silent fallback)
+
+## AI Integration (Optional Enhancement)
+The AI-enhanced version (`app_llm_simple.py`) works alongside the original app:
+
+### How it works:
+- **Silent enhancement**: AI improves "Why this plan?" explanations when available
+- **Zero user-facing changes**: Same interface, no AI indicators or toggles
+- **Graceful fallback**: If AI isn't available, uses rule-based rationale (no errors shown)
+- **Local LLM**: Uses [Ollama](https://ollama.com) with llama3.2:3b model (privacy-focused)
+- **Safety preserved**: All rule-based filtering happens BEFORE any AI involvement
 
 
 ## Agent Logic: Constraint Mapping (How Safety Works)
 The agent uses rule-based filtering and substitution before formatting the final plan.
-
-| Input | Filtering / Substitution |
-|---|---|
-| Knee pain | Avoid knee-strain movements (e.g., lunges); substitute safer alternatives |
-| Back pain | Avoid back-strain options; substitute smaller-range core moves |
-| No jumping / Quiet | Remove high-impact movements (e.g., burpees, jumping jacks) |
-| Low energy | Prefer low-impact and simpler variations |
-| Sore Chest/Shoulders | Avoid shoulder-heavy pushing; swap to gentle alternatives |
-| Sore Legs | Avoid squat/lunge patterns; shift to mobility/upper body focus |
-| Sore Core/Back | Avoid heavy core loading; choose gentle mobility |
 
 ## Success criteria (early)
 - User can generate a safe plan in **< 30 seconds**
@@ -113,11 +104,17 @@ The agent uses rule-based filtering and substitution before formatting the final
 - **Trust & Safety:** thumbs-down / “too hard / unsafe / irrelevant” rate  
 - **Retention:** D7 / D30 returning users
 
-
 ## Run locally
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+## To enable AI features (optional)
+```bash
+# 1. Install Ollama: https://ollama.com/
+# 2. Start Ollama in a terminal: ollama serve
+# 3. Download model (first time): ollama pull llama3.2:3b
+# 4. Run AI-enhanced version: streamlit run app_llm_simple.py
 
 
 
