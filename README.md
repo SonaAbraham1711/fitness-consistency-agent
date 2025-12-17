@@ -17,7 +17,7 @@ A calm, minimal fitness-planning **agent** that generates a short daily workout 
 
 ## Why I’m building this
 Many fitness apps create friction: too many choices, too much time, and “commitment anxiety.”  
-This MVP focuses on one job-to-be-done: **help a busy person decide “What should I do today?” in under 30 seconds** — safely and with low effort.
+This MVP focuses on one job to be done: **help a busy person decide “What should I do today?” in under 30 seconds** safely and with low effort.
 
 
 ## Target user
